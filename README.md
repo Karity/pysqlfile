@@ -5,7 +5,7 @@ a simple sqlfile manager (get sql statements with key)
 ##example.sql
     /*最靠近sql有一句的那一行就是这条sql语句的key ，sql语句的结尾 最好加上“;”*/
     /*example_sql_key*/
-    select * from $table where filed1 = @filed1；
+    select * from $table where filed1 = @filed1;
 
 ##example.py
     import pysqlfile as pf
