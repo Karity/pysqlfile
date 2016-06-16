@@ -1,18 +1,18 @@
 # pysqlfile
-a simple sqlfile manager (get sql statements with key)
+a simple sqlfile manager (get sql statements with keys)
 
 #usage
 ##example.sql
-    /*×î¿¿½üsqlÓĞÒ»¾äµÄÄÇÒ»ĞĞ¾ÍÊÇÕâÌõsqlÓï¾äµÄkey £¬sqlÓï¾äµÄ½áÎ² ×îºÃ¼ÓÉÏ¡°;¡±*/
+    /*æœ€é è¿‘sqlæœ‰ä¸€å¥çš„é‚£ä¸€è¡Œå°±æ˜¯è¿™æ¡sqlè¯­å¥çš„key ï¼Œsqlè¯­å¥çš„ç»“å°¾ æœ€å¥½åŠ ä¸Šâ€œ;â€*/
     /*example_sql_key*/
     select * from $table where filed1 = @filed1;
 
 ##example.py
     import pysqlfile as pf
     
-    pf.addFile('example.sql') #Ìí¼ÓÒ»¸ösqlÎÄ¼ş
-    pf.addDir('../pysqlfile')#Ìí¼ÓÒ»¸öº¬sqlÎÄ¼şµÄÄ¿Â¼ Ä¬ÈÏ¶ÁÈ¡.sql .sqlx .sqlsÎÄ¼ş
-    sql=pf.getSql('example_sql_key') #»ñÈ¡Ò»ÌõsqlÓï¾ä
+    pf.addFile('example.sql') #æ·»åŠ ä¸€ä¸ªsqlæ–‡ä»¶
+    pf.addDir('../pysqlfile')#æ·»åŠ ä¸€ä¸ªå«sqlæ–‡ä»¶çš„ç›®å½• é»˜è®¤è¯»å–.sql .sqlx .sqlsæ–‡ä»¶
+    sql=pf.getSql('example_sql_key') #è·å–ä¸€æ¡sqlè¯­å¥
     print sql
     sql.setVal(table='test')
     sql.setParams(filed1=0)
